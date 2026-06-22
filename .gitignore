@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+*.pdf
+*.wav
+*.zip
+Conference-LaTeX-template
+*.md
+at1-espa04-projec
