@@ -29,8 +29,8 @@ def sliding_window_entropy(signal, window_size=500, step_size=50, bins=256):
 
 print("Carregando os áudios...")
 # Forcei sr=None para garantir que o librosa mantenha o sample rate original exato dos arquivos
-audio1, sr1 = librosa.load("audio01.wav", sr=None)
-audio2, sr2 = librosa.load("audio02.wav", sr=None)
+audio1, sr1 = librosa.load("../audio01.wav", sr=None)
+audio2, sr2 = librosa.load("../audio02.wav", sr=None)
 
 # Extraindo os quatro momentos estatísticos dos áudios
 m1_mean, m1_var, m1_sk, m1_kurt = get_four_moments(audio1)
@@ -76,7 +76,7 @@ plt.title('Sinal no Tempo - Áudio 2')
 plt.xlabel('Tempo (s)')
 plt.ylabel('Amplitude')
 plt.tight_layout()
-plt.savefig('audio_sinal_tempo.png')
+plt.savefig('images/audio_sinal_tempo.png')
 
 # Gráfico 2: Entropia de Shannon
 time_ent1 = np.linspace(0, len(audio1) / sr1, num=len(ent1))
@@ -90,6 +90,6 @@ plt.xlabel('Tempo (s)')
 plt.ylabel('Entropia (bits)')
 plt.legend()
 plt.tight_layout()
-plt.savefig('audio_entropia.png')
+plt.savefig('images/audio_entropia.png')
 
 print("Análise concluída com sucesso. Imagens geradas.")

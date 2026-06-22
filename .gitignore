@@ -12,5 +12,6 @@ wheels/
 *.wav
 *.zip
 Conference-LaTeX-template
-*.md
+# *.md
+mds/
 at1-espa04-projec
